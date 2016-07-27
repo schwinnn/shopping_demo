@@ -88,10 +88,6 @@ a {
   flex: 1 auto;
 }
 
-.products {
-  background-color: #f8aeb1;
-}
-
 .site__right-sidebar {
   position: fixed;
   right: 0;
@@ -111,40 +107,210 @@ a {
 }
 .product {
   width: 50%;
-  height: 250px;
-  background-color: #b0f9b3;
-  margin-bottom: 20px;
+  padding: 10px 5px 10px;
 }
 
+.product__display {
+  border: 5px solid #d8d8d8;
+  padding: 10px;
+  align-items: center;
+  background: #fff;
+}
+
+.product__img{
+  width: 100%;
+}
+
+.product__price{
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+
+.product__add{
+  width: 60px;
+  background: #d8d8d8;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 15px;
+}
+
+.product__add:hover{
+  background: #78a3ca;
+}
+
+.product__description{
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.product__name {
+  flex: 1 auto;
+  font-size: 18px;
+  color: #202020;
+  line-height: 1;
+  font-family: "AvenirNext-UltraLight";
+}
+
+.product__heart{
+  flex: none;
+  cursor: pointer;
+}
 
 .cart {
-  /*overflow-y: scroll;*/
-  overflow-y: scroll;
+  flex-basis: 0;
+  flex-grow: 1;
 }
+
 .cart__title {
-  position: fixed;
-  top: 0px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-left: 20px;
+  background: linear-gradient(to bottom, #C4CCDA 50%, rgba(192,207,221,0.1));
 }
 .cart__content{
-  margin-top: 40px;
+  padding-top: 40px;
+  overflow-y: scroll;
+  flex-grow: 1;
+  flex-basis: 0;
+  background: #c4ccda;
 }
 
-.cart-item {
-  height: 150px;
+.cart-item{
   margin-bottom: 20px;
-  background: rgba(0,255,0,0.3);
+  padding: 0 20px;
 }
 
-.checkout {
+.checkout{
+  flex-basis: auto;
+  flex-grow: 0;
+  padding: 0 20px 20px;
   height: 300px;
-  background: rgba(0,0,255,0.3);
+  background: linear-gradient(to bottom, #c4ccda, rgba(247,248,250,0.1));
+}
+
+.checkout:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  /*background: rgba(255, 255, 255, 0.5);*/
+  background: linear-gradient(to top, #C4CCDA, rgba(192,207,221,0.1));
+  z-index: 2;
+}
+
+.cart-item__top-part{
+  flex-direction: row;
+}
+
+.cart-item__image{
+  width: 33%;
+  align-self: center;
+  border: 3px solid #d8d8d8;
+}
+
+.cart-item__image img{
+  width: 100%;
+}
+
+.cart-item__top-part__middle{
+  flex: 1;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.cart-item__price{
+  font-weight: bold;
+}
+
+.cart-item__trash{
+  cursor: pointer;
+}
+
+.cart-item__qty{
+  margin-top: 10px;
+}
+
+.adjust-qty{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+
+.adjust-qty__button{
+  width:  20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: #d8dae5;
+  cursor: pointer;
+}
+
+.adjust-qty__number{
+  margin: 0 15px;
 }
 
 
+.checkout__divider{
+  background: #9298a1;
+  border: 0;
+  height: 1px;
+  width: 50%;
+}
 
+.checkout__coupon-input{
+  border: 2px solid #d8d8d8;
+  padding: 5px;
+}
 
+.checkout__coupon-msg{
+  color: #dc1a00;
+  margin: 10px 0;
+  font-size: 18px;
+  font-family: "AvenirNext-DemiBold";
+  flex: 1 auto;
+}
 
+.checkout__amounts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "AvenirNext-Regular";
+  justify-content: space-between;
+}
 
+.checkout__amount-title {
+  width: 40%;
+}
+.checkout__amount-content {
+  width: 40%;
+}
+
+.checkout__amount{
+  font-size: 12px;
+  color: #202020;
+}
+
+.checkout__amount--strikeout {
+  text-decoration: line-through;
+}
 
 
 
